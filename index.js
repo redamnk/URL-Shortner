@@ -35,7 +35,7 @@ server.post("/api/v1/short-url/new", (req, res) => {
   res.status(201).json({
     success: true,
     message: "Short URL created",
-    shortUrl: `http://localhost:${PORT}/${keyid}`,
+    shortUrl: `http://localhost:${request.host}/${keyid}`,
   });
 });
 
